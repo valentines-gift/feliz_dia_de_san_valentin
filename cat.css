@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Estilo global */
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Gato */
+.cat {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: wiggle 3s infinite;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Orejas */
+.ear {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    top: -15px;
+    border: 2px solid black;
+}
+
+.left-ear {
+    left: 10px;
+    transform: rotate(-20deg);
+}
+
+.right-ear {
+    right: 10px;
+    transform: rotate(20deg);
+}
+
+/* Cara */
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* Ojos */
+.eye {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    top: 40px;
+    animation: blink 4s infinite;
+}
+
+.left-eye {
+    left: 30px;
+}
+
+.right-eye {
+    right: 30px;
+}
+
+/* Parpadeo */
+@keyframes blink {
+    0%, 80%, 100% { height: 15px; }
+    90% { height: 3px; }
+}
+
+/* Nariz */
+.nose {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    border-radius: 50%;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Boca */
+.mouth {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    border-bottom: 3px solid black;
+    border-radius: 50%;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bigotes */
+.whiskers {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: rgb(251, 180, 192);
+}
+
+.left-whiskers {
+    left: -40px;
+}
+
+.right-whiskers {
+    right: -40px;
+}
+
+.whiskers.top {
+    top: 55px;
+}
+
+.whiskers.bottom {
+    top: 65px;
+}
+
+/* Cuerpo */
+.body {
+    position: absolute;
+    width: 90px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cola */
+.tail {
+    position: absolute;
+    width: 15px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    top: 120px;
+    left: 110px;
+    transform: rotate(30deg);
+    animation: move-tail 2s infinite alternate;
+}
+
+@keyframes move-tail {
+    0% { transform: rotate(30deg); }
+    100% { transform: rotate(45deg); }
+}
+
+/* Nube de diálogo */
+.cloud {
+    position: absolute;
+    top: -60px;
+    left: 80%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.cloud::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+/* Animación del gato */
+@keyframes wiggle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+/* Botón */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+h1 {
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif; /* Cambié la fuente a Montserrat */
+    font-size: 2.1rem; /* Tamaño de fuente ajustado */
+    text-align: center; /* Centrado */
+    color: #ffffff; 
+    animation: fadeIn 2s ease-in-out; /* Animación simple */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2fc10b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #308f0a;
+}
+
